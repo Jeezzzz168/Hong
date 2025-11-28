@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone</title>
+    <link rel="stylesheet" href="asset/bootstrap/css/bootstrap.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Navbar</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+ 
+  <style>
+      footer {
+      background-color: #212529;
+      color: white;
+      padding: 50px 0;
+    }
+
+    footer a {
+      color: #81807e;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #000000;
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 30px;
+      padding-top: 20px;
+      text-align: center;
+    }
+    /* Navbar hover effect */
+    .navbar-nav .nav-link {
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: blue; /* Bootstrap primary color */
+  
+    }
+    .navbar{
+      background-color:
+#FDBB2D
+;
+    }
+
+
+    /* Underline hover animation */
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #0d6efd;
+      transition: width 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #121212;
+      color: white;
+    }
+
+    body.dark-mode .navbar {
+      background-color: #1f1f1f !important;
+    }
+
+    body.dark-mode .nav-link {
+      color: white !important;
+    }
+
+    body.dark-mode .form-control {
+      background-color: #333;
+      color: white;
+      border: 1px solid #555;
+    }
+
+    body.dark-mode .btn-outline-success {
+      color: rgb(26, 11, 11);
+      border-color: #0d6efd;
+    }
+
+    body.dark-mode .btn-outline-success:hover {
+      background-color: #0d6efd;
+    }
+
+    /* Dark mode icon style */
+    #theme-toggle {
+      border: none;
+      background: none;
+      font-size: 1.3rem;
+      color: #0d6efd;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+    #theme-toggle:hover {
+      color: #0056b3;
+    }
+    /* === Global Styles === */
+:root {
+  --main-color: #1a1a1a;
+  --gold-color: #d8b75c;
+  --blue-color: #58A8E6;
+  --green-color: #22c373;
+  --prime-bg: #f8f9fa;
+  --text-prime: #333;
+  --text-second: #666;
+}
+
+body {
+  font-family: "Poppins", "Battambang", sans-serif;
+  background-color: var(--prime-bg);
+  color: var(--text-prime);
+  line-height: 1.6;
+}
+
+/* === Utility === */
+.text-main {
+  color: var(--main-color);
+}
+
+.text-prime {
+  color: var(--text-prime);
+}
+
+.text-second {
+  color: var(--text-second);
+}
+
+.bg-gold {
+  background-color: var(--gold-color);
+}
+
+.bg-prime {
+  background-color: #222;
+}
+
+.bg-third {
+  background-color: #f2f2f2;
+}
+
+.btn-gold {
+  background-color: var(--gold-color);
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.btn-gold:hover {
+  background-color: #b89c45;
+  transform: translateY(-3px);
+}
+.border-blue {
+  border: 2px solid var(--blue-color);
+  transition: 0.3s;
+}
+.border-blue:hover {
+  background-color: var(--blue-color);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* === Section Titles === */
+h1, h2, h3, h4, h5 {
+  letter-spacing: 0.5px;
+}
+
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* === Cards === */
+.card {
+  border-radius: 16px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* === Icon Circle === */
+.icon-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 26px;
+  transition: all 0.3s ease;
+}
+.icon-circle:hover {
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* === FAQ Section === */
+.accordion-button {
+  background-color: #fff;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+.accordion-button:hover {
+  background-color: #f8f8f8;
+  color: var(--gold-color);
+}
+.accordion-body {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+}
+
+/* === Achievement Counter === */
+.achi-num {
+  font-size: 3rem;
+  color: #fff;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+.achi-num:hover {
+  transform: scale(1.1);
+}
+
+.achi-title {
+  color: white;
+  font-size: 1.1rem;
+}
+
+/* === Footer === */
+footer {
+  background-color: #111;
+  color: var(--text-second);
+}
+footer .nav-link:hover {
+  color: var(--gold-color);
+  transform: translateX(4px);
+}
+footer .fs-4 {
+  transition: 0.3s;
+}
+footer .fs-4:hover {
+  color: var(--gold-color);
+  transform: scale(1.2);
+}
+footer .download {
+  width: 130px;
+  transition: 0.3s;
+}
+footer .download:hover {
+  transform: scale(1.05);
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .card-body {
+    padding: 2rem 1rem;
+  }
+  section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .achi-num {
+    font-size: 2.2rem;
+  }
+  h1, h2 {
+    font-size: 1.6rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg  shadow-sm ">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><img src="https://img.pikbest.com/png-images/20241022/stealth-masked-hacker-gaming-logo-for-gamers_10991543.png!bw700" style="width: 50px;" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+        <ul class="navbar-nav mb-lg-0" style="padding-left: 200px; font-size: 20px;">
+          <li class="nav-item"><a class="nav-link " href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="product .html"><i class="fa-solid fa-cart-shopping"></i> Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="about us.html"><i class="fa-solid fa-shield"></i> about us</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+        </ul>
+
+        <form class="d-flex align-items-center">
+                <button id="theme-toggle" type="button" title="Toggle theme" >
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+      
+        </form>
+      </div>
+    </div>
+  </nav>
+
+<section class="what-is-ds pb-5">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h1 class="fw-bold text-main" id="app" data-aos="fade-right" style="color: #0d6efd;">
+        What is <span class="ff">Digital Smartphone</span> <span style="color: #d8b75c;" class="ff">&</span> <span class="ff">Technology</span>?
+      </h1>
+      <p class="mt-3 fs-5 text-prime" data-aos="fade-right">
+        <span class="ff">DST</span> is a website focused on the latest mobile technology, innovation, and digital lifestyle trends.
+      </p>
+    </div>
+    <div class="row g-4 justify-content-between">
+      <div class="col-lg-4">
+        <div class="card bg-transparent border-0 rounded-3" data-aos="fade-right">
+          <div class="card-body text-center p-5 text-prime">
+            <i class="bi bi-phone d-flex justify-content-center align-items-center mx-auto rounded-circle fs-3 fw-bold bg-gold mb-3" style="width: 65px; height: 65px;"> <i class="fa-solid fa-phone"></i></i>
+            <h3>Smartphones</h3>
+            <p class="card-text mt-1">
+              We explore the newest smartphones, comparing features, performance, and design to help users make smart buying decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card bg-transparent border-0 rounded-3" data-aos="fade-right">
+          <div class="card-body text-center p-5 text-prime">
+            <i class="bi bi-cpu d-flex justify-content-center align-items-center mx-auto rounded-circle fs-3 fw-bold bg-gold mb-3" style="width: 65px; height: 65px; background-color: #22c373;"><i class="fa-solid fa-computer"></i></i>
+            <h3>Technology</h3>
+            <p class="card-text mt-1">
+              Learn about innovations in processors, cameras, batteries, and software shaping the future of mobile technology.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card bg-transparent border-0 rounded-3" data-aos="fade-right">
+          <div class="card-body text-center p-5 text-prime">
+            <i class="bi bi-trophy d-flex justify-content-center align-items-center mx-auto rounded-circle fs-3 fw-bold bg-gold mb-3" style="width: 65px; height: 65px; "><i class="fa-solid fa-lightbulb"></i></i>
+            <h3>Innovation</h3>
+            <p class="card-text mt-1">
+              We highlight breakthroughs in AI, mobile photography, and design — celebrating how phones are transforming our daily lives.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Achievement -->
+<section>
+  <div class="container-fluid bg-gold py-2" data-aos="fade-right" data-aos-delay="100">
+    <div class="row">
+      <div class="col-4">
+        <div class="card border-0 bg-gold shadow-none">
+          <div class="card-body text-center text-white">
+            <div class="d-flex achi-num justify-content-center align-items-center">
+              <h1 class="counter card-title achi-num ff" data-countto="1200" data-duration="2000">0</h1>
+            </div>
+            <h3 class="achi-title">Daily Readers</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card border-0 bg-gold text-white shadow-none">
+          <div class="card-body text-center">
+            <div class="d-flex display-6 justify-content-center align-items-center">
+              <h1 class="counter card-title achi-num ff" data-countto="5" data-duration="2000">0</h1>
+              <span class="ms-1 mb-2">Years</span>
+            </div>
+            <h3 class="achi-title">Experience</h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card border-0 bg-gold shadow-none">
+          <div class="card-body text-center text-white">
+            <div class="d-flex achi-num justify-content-center align-items-center">
+              <h1 class="counter card-title achi-num ff" data-countto="350" data-duration="2000">0</h1>
+            </div>
+            <h3 class="achi-title text-nowrap">Product Reviews</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why It’s Important -->
+<section class="important py-10">
+  <div class="container">
+    <div class="text-center mb-8">
+      <h1 class="fw-bold text-main" data-aos="fade-right" style="color: #0d6efd;">Why Are Phones Important?</h1>
+      <p class="mt-3 fs-5 text-prime" data-aos="fade-right">
+        Smartphones are essential in connecting people, boosting productivity, and improving our daily lifestyle.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card border-0 d-flex align-items-start ps-5 bg-transparent" data-aos="fade-right">
+          <div class="card-body d-flex justify-content-center align-items-start">
+            <div class="icon-circle me-4 " style="background-color: #ebc55c; border-radius: 100%; padding: 20px;">
+              <i class="fa-solid fa-earth-americas"></i>
+              <i class="bi bi-globe fs-3"></i>
+            </div>
+            <div>
+              <h5 class="card-title fw-bold text-prime">Global Connection</h5>
+              <p class="card-text text-prime">Phones connect billions of people across the world through calls, social media, and instant messaging.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 d-flex align-items-start ps-5 bg-transparent" data-aos="fade-right">
+          <div class="card-body d-flex justify-content-center align-items-start">
+            <div class="icon-circle me-4" style="background-color: #58A8E6; border-radius: 100%; padding: 30px;">
+              <i class="fa-solid fa-chalkboard-user"></i>
+              <i class="bi bi-lightbulb fs-3 text-white"></i>
+            </div>
+            <div>
+              <h5 class="card-title fw-bold text-prime">Innovation & Learning</h5>
+              <p class="card-text text-prime">Modern phones are gateways to knowledge — helping users learn, work, and create anywhere.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 d-flex align-items-start ps-5 bg-transparent" data-aos="fade-right" data-aos-delay="600">
+          <div class="card-body d-flex justify-content-center align-items-start">
+            <div class="icon-circle me-3" style="background-color: #22c373; border-radius: 100%; padding: 30px;">
+              <i class="fa-solid fa-heart-pulse"></i>
+              <i class="bi bi-battery-charging text-white fs-3"></i>
+            </div>
+            <div>
+              <h5 class="card-title fw-bold text-prime">Smart Living</h5>
+              <p class="card-text text-prime">With apps and smart tools, phones make daily life easier — from health tracking to smart home control.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card border-0 d-flex align-items-start ps-5 bg-transparent" data-aos="fade-right" data-aos-delay="700">
+          <div class="card-body d-flex justify-content-center align-items-start">
+            <div class="icon-circle me-3" style="background-color: #ebc55c;  border-radius: 100%; padding: 30px;">
+              <i class="fa-solid fa-photo-film"></i>
+              <i class="bi bi-camera fs-3"></i>
+            </div>
+            <div>
+              <h5 class="card-title fw-bold text-prime">Creativity & Media</h5>
+              <p class="card-text text-prime">Mobile photography and video creation empower millions to share stories and ideas creatively.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mt-5">
+   <footer>
+    <div class="container">
+      <div class="row text-center text-md-start">
+        <!-- Column 1 -->
+        <div class="col-md-4 mb-4 ">
+          <h5 class="fw-bold text-uppercase">About Us</h5>
+          <p class="small">
+            We provide the best phones and accessories at great prices. Quality and service you can trust.
+          </p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold text-uppercase">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-4 mb-4">
+          <h5 class="fw-bold text-uppercase">Follow Us</h5>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <p class="mt-3 small">
+            <i class="fa-solid fa-envelope"></i> info@phoneshop.com
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="small mb-0">&copy; 2025 PhoneShop. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</section>
+
+      
+  
+
+
+
+</body>
+</html>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const toggleButton = document.getElementById('theme-toggle');
+    const body = document.body;
+    let darkMode = false;
+
+    toggleButton.addEventListener('click', () => {
+      darkMode = !darkMode;
+      body.classList.toggle('dark-mode', darkMode);
+      toggleButton.innerHTML = darkMode 
+        ? '<i class="fa-solid fa-sun"></i>' 
+        : '<i class="fa-solid fa-moon"></i>';
+    });
+  </script>
+    <script src="assets/plugins/bootstrap-5.3.7/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/plugins/aos/js/aos.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Typewriter Effect -->
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+  <!-- Typewriter Effect -->
+     <script>
+    const counters = document.querySelectorAll('.counter');
+
+    const startCounter = (counter) => {
+      const target = +counter.getAttribute('data-countto');
+      const duration = +counter.getAttribute('data-duration');
+      const step = target / (duration / 20);
+
+      let count = 0;
+      const update = setInterval(() => {
+        count += step;
+        if (count >= target) {
+          count = target;
+          clearInterval(update);
+        }
+        counter.textContent = Math.floor(count);
+      }, 20);
+    };
+
+    // Start counters when visible
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          startCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+    
+  </script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+    var app = document.getElementById('app');
+
+    var typewriter = new Typewriter(app, {
+      loop: true
+    });
+
+    typewriter.typeString(' What is Digital smartphone  Teachnology?')    
+     .pauseFor(2500)
+      .deleteAll()
+      .typeString('What is Digital Smartphone Teachnology?')
+      .pauseFor(2500)
+      .start();
+  </script>
+
+
+
+    
+</body>
+<script src="asset/bootstrap/js/bootstrap.min.js"></script>
+</html>
